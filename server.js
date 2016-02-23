@@ -31,7 +31,7 @@ wss.on("connection", function(ws, req) {
   });
 
   ws.on("message", function(op) {
-    // console.log('op', JSON.stringify(JSON.parse(op), null, 2));
+    console.log('op', JSON.stringify(JSON.parse(op), null, 2));
     stream.push(op);
   });
   ws.on("close", function() {
